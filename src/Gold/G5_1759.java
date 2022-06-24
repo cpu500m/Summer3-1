@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class G5_1759 {
     static boolean[] mark;
     static char[] answer;
-    static ArrayList<String> result = new ArrayList<String>();
+    static ArrayList<String> result = new ArrayList<>();
     public static void main(String[] args) {
         int count;
         int actual_count;
@@ -46,7 +46,7 @@ public class G5_1759 {
                 System.out.println();
         }
     }
-    public static int searchSolution(char[] set, char alphabet,final int actual_count, int print_count, int cons_count, int vow_count){
+    public static void searchSolution(char[] set, char alphabet,final int actual_count, int print_count, int cons_count, int vow_count){
         answer[print_count]=alphabet;
         print_count++;
         switch(alphabet){
@@ -66,15 +66,14 @@ public class G5_1759 {
                 // 모음 자음 개수 검사
                 if (vow_count > 0 && cons_count > 1)
                     result.add(String.valueOf(answer));
-                return 1;
+                return ;
             }
             // mark가 false인 경우 ( 아직 탐색 안한 알파벳) && 진입 전에 promising한 node로 가는지 검사
-            if (mark[i] == false && Character.compare(alphabet, set[i]) < 0) {
+            if (!mark[i] && Character.compare(alphabet, set[i]) < 0) {
                 mark[i] = true;
                 searchSolution(set, set[i], actual_count, print_count, cons_count, vow_count);
                 mark[i] = false;
             }
         }
-        return 0;
     }
 }
