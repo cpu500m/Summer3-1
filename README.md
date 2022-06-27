@@ -24,4 +24,4 @@
 * 2022-06-24 : [G2_2749](https://github.com/cpu500m/Summer3-1/blob/master/src/Gold/G2_2749.java) , [S3_2606](https://github.com/cpu500m/Summer3-1/blob/master/src/Silver/S3_2606.java)
 * 2022-06-25 : [G2_1202](https://github.com/cpu500m/Summer3-1/blob/master/src/Gold/G2_1202.java)
 * 2022-06-26 : [G2_2437](https://github.com/cpu500m/Summer3-1/blob/master/src/Gold/G2_2437.java) , [S1_10844](https://github.com/cpu500m/Summer3-1/blob/master/src/Silver/S1_10844.java) , [S3_12841](https://github.com/cpu500m/Summer3-1/blob/master/src/Silver/S3_12841.java) , 브론즈4문제
-* 2022-06-27 : [G3_1005](https://github.com/cpu500m/Summer3-1/blob/master/src/Gold/G3_1005.java)
+* 2022-06-27 : [G3_1005](https://github.com/cpu500m/Summer3-1/blob/master/src/Gold/G3_1005.java) , 브론즈 
