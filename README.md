@@ -14,7 +14,7 @@
 * 2022-06-24 : 공간복잡도와 시간복잡도를 본격적으로 따지기 시작.  JAVA에서 큰 수를 다룰 때 사용하는 BigInteger 클래스.
 * 2022-06-25 : PriorityQueue
 * 2022-06-26 : Primitive type array의 sorting을 지원하는 Arrays.sort ( 내림차순이면 배열명과함께 Collections.reverseOrder() 을 함께 넘겨 줌) , DP 복습
-* 2022-06-27 : DP방식에서 -1초기화의 중요성 , 큰 데이터에 대해 Scanner와 System.out.println이용보다 Buffer클래스의 이용이 유리하다는 것.
+* 2022-06-27 : DP방식에서 -1초기화의 중요성 , 큰 데이터에 대해 Scanner와 System.out.println이용보다 Buffer클래스의 이용이 유리하다는 것. ( 이때부터 버퍼클래스를 입출력에 사용.)
 
 ### **날짜 별 해결한 문제**
 * 2022-06-20 : [S4_2839](https://github.com/cpu500m/Summer3-1/blob/master/src/Silver/S4_2839.java)
