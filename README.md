@@ -34,3 +34,4 @@
 * 2022-06-27 : [G3_1005](https://github.com/cpu500m/Summer3-1/blob/master/src/Gold/G3_1005.java) ,[B4_15552](https://github.com/cpu500m/Summer3-1/blob/master/src/Bronze/B4_15552.java) ,다수 브론즈 문제
 * 2022-06-28 : [G2_3109](https://github.com/cpu500m/Summer3-1/blob/master/src/Gold/G2_3109.java) , [B1_10989](https://github.com/cpu500m/Summer3-1/blob/master/src/Bronze/B1_10989.java)
 * 2022-06-29 : [G4_2448](https://github.com/cpu500m/Summer3-1/blob/master/src/Gold/G4_2448.cpp)
+* 2022-07-01 : [G2_2250](https://github.com/cpu500m/Summer3-1/tree/master/src/Gold)
