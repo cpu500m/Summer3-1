@@ -22,6 +22,7 @@
 * 2022-06-27 : DP방식에서 -1초기화의 중요성 , 큰 데이터에 대해 Scanner와 System.out.println이용보다 Buffer클래스의 이용이 유리하다는 것. ( 이때부터 버퍼클래스를 입출력에 사용.)
 * 2022-06-28 : Greedy 알고리즘 복습 , 한번 계산했던 내용을 저장하여 시간단축 하는 것의 중요성 , 반복 출력에서 Stringbuilder를  시간단축
 * 2022-06-29 : 오랜만에 C++이용해봄 
+* 2022-07-02 : 에라토스테네스의 체
 
 ### **날짜 별 해결한 문제**
 * 2022-06-20 : [S4_2839](https://github.com/cpu500m/Summer3-1/blob/master/src/Silver/S4_2839.java)
@@ -35,3 +36,4 @@
 * 2022-06-28 : [G2_3109](https://github.com/cpu500m/Summer3-1/blob/master/src/Gold/G2_3109.java) , [B1_10989](https://github.com/cpu500m/Summer3-1/blob/master/src/Bronze/B1_10989.java)
 * 2022-06-29 : [G4_2448](https://github.com/cpu500m/Summer3-1/blob/master/src/Gold/G4_2448.cpp)
 * 2022-07-01 : [G2_2250](https://github.com/cpu500m/Summer3-1/tree/master/src/Gold)
+* 2022-07-02 : [G3_2904](https://github.com/cpu500m/Summer3-1/tree/master/src/Gold)
