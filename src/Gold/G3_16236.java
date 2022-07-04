@@ -47,6 +47,7 @@ public class G3_16236 {
     static Queue<Vector<Integer>> queue;
     static Vector<Integer> position;
     static int size = 0;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -61,19 +62,20 @@ public class G3_16236 {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < size; j++) {
                 space[i][j] = Integer.parseInt(st.nextToken());
-                if(space[i][j] == 9){
+                if (space[i][j] == 9) {
                     baby_shark.setX(j);
                     baby_shark.setY(i);
                 }
             }
         }
         // 계속 돌려야함 큐가 비어있을 때 까지
-        searchFish(baby_shark);
-    }
-    static boolean searchFish(Shark baby_shark) {
-
+//        searchFish(baby_shark);
     }
 }
+//    static boolean searchFish(Shark baby_shark) {
+//
+//    }
+//}
 /* 두번째 생각 */
 //    static int searchFish(int y_pos, int x_pos, int move) {
 //        int mv = move;
