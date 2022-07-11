@@ -24,6 +24,7 @@ public class G5_2447 {
         }
         bw.flush();
     }
+
     public static void storeStar(int n){
         if(n == 1) {
             star[1][1] = '*';
