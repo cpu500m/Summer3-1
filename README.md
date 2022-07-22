@@ -6,6 +6,8 @@
 2. [날짜 별 학습 내용](#날짜-별-학습한-주요-내용)
 3. [해결한 문제](#날짜-별-해결한-문제)
 
+[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=cpu500m)](https://solved.ac/cpu500m/)
+
 ### **백준 등급 변화**
 * 2022-06 20 : 브론즈 3 시작
 * 2022-06 22 : 브론즈 2
