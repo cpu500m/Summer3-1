@@ -1,12 +1,12 @@
 # 백준 문제를 푼 레퍼지토리
 ### 방학기간 동안 2022년 6월 20일부터 시작하여 하루 1개씩 풀어서 올리는 것에 중점을 두었습니다. 
+[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=cpu500m)](https://solved.ac/cpu500m/)
 
 ## 내용
 1. [백준 등급 변화](#백준-등급-변화)
 2. [날짜 별 학습 내용](#날짜-별-학습한-주요-내용)
 3. [해결한 문제](#날짜-별-해결한-문제)
 
-[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=cpu500m)](https://solved.ac/cpu500m/)
 
 ### **백준 등급 변화**
 * 2022-06 20 : 브론즈 3 시작
