@@ -37,11 +37,12 @@ public class S3_15651 {
     }
     static boolean promising(int i){
         int k=1;
-        return true;
-//        while(k < i && flag){
-//            if(arr[i] == arr[k] || arr[i] < arr[k])
-//                flag = false;
-//            k++;
-//        }
+        boolean flag = true;
+        while(k < i && flag){
+            if(arr[i] < arr[k])
+                flag = false;
+            k++;
+        }
+        return flag;
     }
 }
