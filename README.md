@@ -1,6 +1,7 @@
 # 백준 문제를 푼 레퍼지토리
 ### 방학기간 동안 2022년 6월 20일부터 시작하여 하루 1개씩 풀어서 올리는 것에 중점을 두었습니다. 
 [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=cpu500m)](https://solved.ac/cpu500m/)
+
 ![image](https://user-images.githubusercontent.com/80875680/185860897-6cc2c734-f88b-4f52-b279-20583c9f7a0b.png)
 
 
