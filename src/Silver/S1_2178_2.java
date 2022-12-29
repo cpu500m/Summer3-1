@@ -46,13 +46,12 @@ public class S1_2178_2 {
                 arr[i][j] = Character.getNumericValue(line.charAt(j - 1));
         }
         // 여기서부터 로직부분
-        dynamic(1, 1);
+        bfs(1, 1);
         bw.write(String.valueOf(distance[n][m]));
         bw.flush();
     }
 
-    /* 두번째로 사용해본 방식 (다이나믹 프로그래밍) */
-    static void dynamic(int x, int y) {
+    static void bfs(int x, int y) {
         int i, j;
         Pos_2178 pos;
 
