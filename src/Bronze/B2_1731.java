@@ -1,3 +1,5 @@
+package Bronze;
+
 import java.io.*;
 
 public class B2_1731 {
