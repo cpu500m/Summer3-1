@@ -1,9 +1,11 @@
-package Silver;
+package Gold;
+
+import Silver.S3_14501;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class S3_14501 {
+public class G5_15486 {
     static class Day {
         int start;
         int end;
