@@ -14,7 +14,7 @@ public class S2_1024 {
         int l = Integer.parseInt(st.nextToken());
 
         /* 내생각  */
-        // 먼저 n을 l로 나눠 봄. (받는 값은 실수로)
+        // 먼저 n을 l로 나눠 봄.
         // 나눠서 나온 값이 .5의 형태거나 .0 여야 된단말이지?
 
         // l이 짝수 일 때 .0의 형태가 나오면 X.
