@@ -14,6 +14,7 @@ public class B4_30033 {
             plan[i] = Integer.parseInt(st.nextToken());
         }
 
+
         int res = 0;
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < n; i++) {
