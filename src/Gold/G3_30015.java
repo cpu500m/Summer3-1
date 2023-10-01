@@ -3,7 +3,7 @@
 // 100011 , 1100 , 11100 , 100001 머 요딴식으로 K가3 인데 여러개가 있을 수 있어 그게 중첩될 수 있단거지
 // 내일 풀자
 // 리스트에 담아서 루프 돌면서 20번 갱신하면될듯
-// TODO: 2023-09-30 마저 풀어라
+
 package Gold;
 
 import java.io.*;
@@ -15,9 +15,10 @@ public class G3_30015 {
 
     static class Temp{
         int originScore;
-
+        boolean[] check;
         Temp(int os) {
-            originScore= os;
+            originScore = os;
+            check = new boolean[MAX_POW + 1];
         }
     }
     public static void main(String[] args) throws IOException {
@@ -35,13 +36,20 @@ public class G3_30015 {
         }
 
         /* logic */
+        // 각 학생 별 최대 pow 자릿 수 및 boolean 배열 갱신 O(N)
         int[] cnt = new int[MAX_POW+1];
         getCnt(n, temps, cnt);
 
+        // max_pow를 구한다.O(1)
         int maxPow = getMax(k, cnt);
-        sortArr(temps);
 
-        int result = getResult(k, temps , maxPow);
+        // 시작 리스트를 갱신한다. O(N)
+        List<Temp> list = listInit(n, temps, maxPow);
+        // 루프를 돌며 리스트 내용을 갱신한다 O(N)
+        list = updateList(k, maxPow, list);
+
+        // 리스트 내 값들을 이용하여 결괏값을 구한다 O(1)
+        int result = getResult(k,list);
 
         bw.write(String.valueOf(result));
         bw.flush();
@@ -53,6 +61,7 @@ public class G3_30015 {
             for (int j = 1 << MAX_POW; j > 0; j >>= 1) {
                 if( (j & temps[i].originScore) > 0) {
                     cnt[curCnt]++;
+                    temps[i].check[curCnt] =true;
                 }
                 curCnt--;
             }
@@ -70,23 +79,35 @@ public class G3_30015 {
         return maxPow;
     }
 
-    private static void sortArr(Temp[] temps) {
-        Arrays.sort(temps, new Comparator<Temp>() {
-            @Override
-            public int compare(Temp o1, Temp o2) {
-                return o2.originScore - o1.originScore;
-            }
-        });
+    private static List listInit(int n, Temp[] temps, int maxPow) {
+        List<Temp> list = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            if(temps[i].check[maxPow])
+                list.add(temps[i]);
+        }
+        return list;
     }
 
-    private static int getResult(int k, Temp[] temps , int maxPow) {
-        int result = Integer.MAX_VALUE;
-        int start = maxPow-1;
+    private static List<Temp> updateList(int k, int maxPow, List<Temp> list) {
+        for (int i = maxPow -1; i >= 0; i--) {
+            List<Temp> temp_list = new ArrayList<>();
+            for (int j = 0; j < list.size(); j++) {
+                Temp cur = list.get(j);
+                if (cur.check[i])
+                    temp_list.add(cur);
+            }
+            if(temp_list.size() >= k)
+                list = temp_list;
+        }
+        return list;
+    }
 
-        for (int i = start; i >= 0; i--) {
-            int cnt = 0;
-            List<Integer> list = new ArrayList<>();
-//            if((1<<start) &
+    private static int getResult(int k, List<Temp> list) {
+        int result = Integer.MAX_VALUE;
+        if(list.size() < k)
+            return 0;
+        for (int i = 0; i < k; i++) {
+            result &= list.get(i).originScore;
         }
         return result;
     }
