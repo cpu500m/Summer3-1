@@ -1,4 +1,3 @@
-// TODO 내일 다시해 너무 대충 햇다
 package Silver;
 
 import java.io.*;
@@ -35,8 +34,10 @@ public class S3_2346 {
         while (!list.isEmpty()) {
             Balloon b = list.remove(cur);
             sb.append(b.idx+" ");
-            if(b.next < 0) cur +=1;
-            else cur-=1;
+
+            if(b.next > 0) cur -=1;
+
+            if(n == 1) break;
             cur = (cur+b.next) % --n;
             if(cur < 0) cur+=n;
         }
