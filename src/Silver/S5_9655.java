@@ -1,4 +1,3 @@
-// 따져보니 3이하는 sk승
 // 홀 sk , 짝 cy승
 package Silver;
 
