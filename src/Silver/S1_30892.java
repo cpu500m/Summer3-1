@@ -1,13 +1,44 @@
+// 1번 : 리스트 + 이분탐색 ( 시간이 조금 걸리지만 list를 사용하므로 메모리 절약)
+// 2번 : 스택에 쌓으면서 그리디하게. ( 시간을 줄이지만 arr에 정보를 저장해놔야하므로 메모리 더 써야됨)
 package Silver;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class S1_30892 {
     public static void main(String[] args) throws IOException {
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int n = Integer.parseInt(st.nextToken());
+        int k = Integer.parseInt(st.nextToken());
+        long t = Long.parseLong(st.nextToken());
+
+        int[] arr = new int[n];
+        st = new StringTokenizer(br.readLine());
+        for (int i = 0; i < n; i++) {
+            arr[i] = Integer.parseInt(st.nextToken());
+        }
+        Arrays.sort(arr);
+
+        Stack<Integer> stack = new Stack<>();
+
+        int idx = 0;
+        for (int i = 0; i < k; i++) {
+            // 스택에 넣어
+            while (idx < n && arr[idx] < t){
+                stack.add(arr[idx++]);
+            }
+            // 비어있으면 더먹을거없다
+            if(stack.isEmpty()) break;
+            // 가장 큰거먹어
+            t += stack.pop();
+        }
+
+        bw.write(String.valueOf(t));
+        bw.flush();
+    }
+   /* public static void main(String[] args) throws IOException {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -44,5 +75,5 @@ public class S1_30892 {
             else e = m;
         }
         return s;
-    }
+    }*/
 }
