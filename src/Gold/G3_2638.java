@@ -80,12 +80,6 @@ public class G3_2638 {
                     isOutsideInThisTime[i][j] = isOutside[i][j];
                 }
             }
-            int[][] nextPaper = new int[n][m];
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j < m; j++) {
-                    nextPaper[i][j] = paper[i][j];
-                }
-            }
 
             // 녹을 치즈 탐색해서 로직수행
             for (int i = 0; i < n; i++) {
@@ -102,7 +96,7 @@ public class G3_2638 {
                     }
                     if (contactNumber > 1) { // 녹을애라면 녹이고 BFS 때려야함
                         // 녹은 걸로 처리
-                        nextPaper[i][j] = EMPTY;
+                        paper[i][j] = EMPTY;
                         // BFS로 외부 여부를 갱신
                         queue.add(new Position(i, j));
                         isOutsideInThisTime[i][j] = true;
@@ -112,7 +106,6 @@ public class G3_2638 {
                 }
             }
             isOutside = isOutsideInThisTime;
-            paper = nextPaper;
         }
 
         bw.write(String.valueOf(time));
