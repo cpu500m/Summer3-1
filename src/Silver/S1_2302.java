@@ -33,7 +33,7 @@ public class S1_2302 {
             isVipSeat[num - 1] = true;
         }
 
-        long[][] dp = new long[N][2];
+        int[][] dp = new int[N][2];
 
         dp[0][IS_NOT_IN_THEIR_SEAT] = 0;
         dp[0][IS_IN_THEIR_SEAT] = 1;
