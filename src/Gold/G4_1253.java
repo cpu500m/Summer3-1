@@ -25,42 +25,59 @@ public class G4_1253 {
         int n = Integer.parseInt(br.readLine());
         StringTokenizer st = new StringTokenizer(br.readLine());
         int[] arr = new int[n];
-        for(int i = 0 ; i < n ; i++){
+        for (int i = 0; i < n; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
         /* 로직 */
-        //1. 정렬
+        // 1. 오름차순 정렬
         Arrays.sort(arr);
 
-        // 좋은 수의 개수
-        int result = 0;
+        int answer = 0;
 
-        for(int i = 2 ; i < n ; i++){
-            int end = i-1;
-            while(end+2 < n && arr[end+1] == arr[end+2]){
-                end++;
-            }
-            if(twoPointer(0,end , arr[i] , arr)){
-                result++;
+        for (int i = 0; i < n; i++) {
+            int left = 0;
+            if(left == i) left++;
+            int right = left+1;
+            if(right == i) right++;
+
+            int target = arr[i];
+
+            boolean isRightAtEnd = false;
+            while (left < right && right < arr.length) {
+                if(right == i){
+                    if(isRightAtEnd || right == arr.length-1) {
+                        right--;
+                        isRightAtEnd = true;
+                    }
+                    else right++;
+                    continue;
+                }
+                if(left == i){
+                    left++;
+                    continue;
+                }
+                int sum = arr[left] + arr[right];
+                if(sum < target) {
+                    if(isRightAtEnd) {
+                        left++;
+                    }else {
+                        if(right == arr.length-1){
+                            isRightAtEnd = true;
+                        }else {
+                            right++;
+                        }
+                    }
+                } else if(sum > target){
+                    isRightAtEnd = true;
+                    right--;
+                } else{
+                    answer++;
+                    break;
+                }
             }
         }
-
-        bw.write(String.valueOf(result));
+        bw.write(String.valueOf(answer));
         bw.flush();
-    }
-
-    private static boolean twoPointer(int left, int right, int target ,int[] arr){
-        while(left < right){
-            if(arr[left]+arr[right] == target){
-                return true;
-            }
-            else if(arr[left]+arr[right] < target){
-                left++;
-            } else{
-                right--;
-            }
-        }
-        return false;
     }
 }
